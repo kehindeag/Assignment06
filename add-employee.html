@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employee</title>
-    <script src="js/add-employee.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="m-3">
-    <h2>Add Employee</h2>
-    <form id="empForm">
-        <label for="id">8-Digit Employee ID</label><br>
-        <input type="text" maxlength="8" required id="id"><br>
-        
-        <label for="name">Full Name</label><br>
-        <input type="text" required id="name"><br>
-        
-        <label for="extension">4-Digit Extension</label><br>
-        <input type="text" maxlength="4" required id="extension"><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 5</title>
+    <script src="js/add-employee.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  </head>
+  <body class="mt-2 ml-4">
+    <div class="container">
+      <div class="main">
+        <div class="image">
+          <span><img src="asset/human-resources.png" /></span>
+        </div>
 
-        <label for="email">Email</label><br>
-        <input type="email" required id="email"><br>
-        
-        <label for="department">Department</label><br>
-        <select id="department" required>
-            <option value="administrative">Administrative</option>
-            <option value="engineering">Engineering</option>
-            <option value="executive">Executive</option>
-            <option value="marketing">Marketing</option>
-            <option value="qa">Quality Assurance</option>
-            <option value="sales">Sales</option>
-        </select><br><br>
+        <div class="heading">
+          <h3>Employee Management System</h3>
+        </div>
 
-        <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Add Employee">
-        <input type="button" class="btn btn-primary" name="cancel" id="cancel" value="Cancel">        
-    </form>
-</body>
+        <form id="empForm">
+          <div class="input-text">
+            <input
+              type="text"
+              placeholder="8-Digit Employee ID"
+              require="required"
+              id="id"
+              maxlength="8"
+            />
+          </div>
+
+          <div class="input-text">
+            <input
+              type="text"
+              placeholder="Full Name"
+              require="required"
+              id="fname"
+            />
+          </div>
+          <div class="input-text">
+            <input
+              type="text"
+              placeholder="Ext."
+              require="required"
+              id="ext"
+              maxlength="4"
+            />
+          </div>
+          <div class="input-text">
+            <input type="email" placeholder="Email" id="email" />
+          </div>
+
+          <div class="input-text">
+            <select type="text" id="department">
+              <option>Administrative</option>
+              <option>Engineering</option>
+              <option>Executive</option>
+              <option>Marketing</option>
+              <option>Quality Assurance</option>
+              <option>Sales</option>
+            </select>
+          </div>
+        </form>
+        <div class="button">
+          <button class="next-btn" id="submit">Add Employee</button>
+        </div>
+        <output class="output-text" id="output"></output>
+      </div>
+    </div>
+  </body>
 </html>
